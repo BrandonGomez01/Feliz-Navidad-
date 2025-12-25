@@ -46,97 +46,55 @@
         }
 
         /* Copos de nieve */
-        body::before {
-            content: "";
+        .copo {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('https:                                                                        
-            animation: nieve 10s linear infinite;
-            pointer-events: none;
+            font-size: 11.5em;
+            animation: nieve 5s linear infinite;
         }
 
         @keyframes nieve {
-            from { background-position: 0 0; }
-            to { background-position: 0 100vh; }
+            from { top: -10%; }
+            to { top: 110%; }
         }
 
-                                
-        .luces {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-        }
-
-        .luces::before, .luces::after {
-            content: "";
-            position: absolute;
-            width: 5px;
-            height: 5px;
-            background-color:         
-            border-radius: 50%;
-            animation: parpadeo 1s infinite alternate;
-        }
-
-        .luces::before { top: 20%; left: 30%; }
-        .luces::after { top: 60%; left: 70%; }
-
-        @keyframes parpadeo {
-            from { opacity: 0.5; }
-            to { opacity: 1; }
-        }
-
-                               
-        .estrella {
-            position: absolute;
-            width: 2px;
-            height: 20px;
-            background-color: white;
-            transform: rotate(45deg);
-            animation: estrella 5s infinite;
-        }
-
-        .estrella-1 { top: 10%; left: 50%; animation-delay: 0s; }
-        .estrella-2 { top: 30%; left: 20%; animation-delay: 2s; }
-
-        @keyframes estrella {
-            from { transform: translateX(0) rotate(45deg); opacity: 1; }
-            to { transform: translateX(100px) rotate(45deg); opacity: 0; }
-        }
-
-                           
+        /* Renos */
         .reno {
             position: absolute;
-            width: 30px;
-            height: 30px;
-            background-image: url('https://example.com/reno.png'); /* Reemplaza con una imagen de reno */
-            background-size: cover;
-            animation: volar 10s infinite;
+            font-size: 2em;
+            animation: volar 10s linear infinite;
         }
 
-        .reno-1 { top: 20%; left: 0; animation-delay: 0s; }
-        .reno-2 { top: 40%; left: 0; animation-delay: 3s; }
-
         @keyframes volar {
-            from { transform: translateX(0); }
-            to { transform: translateX(100vw); }
+            from { left: -5%; }
+            to { left: 105%; }
         }
     </style>
 </head>
 <body>
-    <div class="luces"></div>
-    <div class="estrella estrella-1"></div>
-    <div class="estrella estrella-2"></div>
-    <div class="reno reno-1"></div>
-    <div class="reno reno-2"></div>
     <div class="navidad-container">
         <h1 class="mensaje-navidad">Feliz Navidad</h1>
         <p class="descripcion">Que sean felices con sus familias</p>
     </div>
+    <script>
+        // Crear copos de nieve
+        for (let i = 0; i < 50; i++) {
+            const copo = document.createElement('div');
+            copo.className = 'copo';
+            copo.innerHTML = '❄️';
+            copo.style.left = Math.random() * 100 + '%';
+            copo.style.animationDelay = Math.random() * 5 + 's';
+            document.body.appendChild(copo);
+        }
+
+        // Crear renos
+        for (let i = 0; i < 3; i++) {
+            const reno = document.createElement('div');
+            reno.className = 'reno';
+            reno.innerHTML = '🦌';
+            reno.style.top = Math.random() * 80 + 10 + '%';
+            reno.style.animationDelay = Math.random() * 3 + 's';
+            document.body.appendChild(reno);
+        }
+    </script>
 </body>
 </html>
