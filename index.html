@@ -23,17 +23,13 @@
             animation: fadeIn 2s ease-in-out;
             z-index: 1; /* Asegura que el texto esté adelante */
             position: relative;
+            padding: 20px;
         }
 
         .mensaje-navidad {
-            font-size: 2em; /* Tamaño de letra reducido */
+            font-size: 1.2em; /* Tamaño de letra adecuado para Android */
             text-shadow: 0 0 10px #ffcc00, 0 0 20px #ff9900;
-            animation: glow 1.5s infinite alternate;
-        }
-
-        .descripcion {
-            font-size: 11.2em; /* Tamaño de letra reducido */
-            margin-top: 20px;
+            animation: glow 11.5s infinite alternate;
         }
 
         @keyframes fadeIn {
@@ -49,7 +45,7 @@
         /* Copos de nieve */
         .copo {
             position: absolute;
-            font-size: 1.5em;
+            font-size: 1em;
             animation: nieve 5s linear infinite;
             z-index: 0; /* Asegura que los copos estén atrás */
         }
@@ -62,7 +58,7 @@
         /* Renos */
         .reno {
             position: absolute;
-            font-size: 2em;
+            font-size: 1.5em;
             animation: volar 10s linear infinite;
             z-index: 0; /* Asegura que los renos estén atrás */
         }
@@ -75,8 +71,7 @@
 </head>
 <body>
     <div class="navidad-container">
-        <h1 class="mensaje-navidad">Feliz Navidad</h1>
-        <p class="descripcion">Que la pasen bien, los quiero</p>
+        <p class="mensaje-navidad">Feliz Navidad, te quiero. Que la pases bien con tu familia</p>
     </div>
     <script>
         // Crear copos de nieve
