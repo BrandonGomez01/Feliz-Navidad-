@@ -53,7 +53,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('https://example.com/copos-neige.png'); /* Reemplaza con una imagen de copos */
+            background-image: url('https:                                                                        
             animation: nieve 10s linear infinite;
             pointer-events: none;
         }
@@ -63,7 +63,7 @@
             to { background-position: 0 100vh; }
         }
 
-        /* Luces parpadeantes */
+                                
         .luces {
             position: absolute;
             top: 0;
@@ -78,7 +78,7 @@
             position: absolute;
             width: 5px;
             height: 5px;
-            background-color: #ffcc00;
+            background-color:         
             border-radius: 50%;
             animation: parpadeo 1s infinite alternate;
         }
@@ -91,7 +91,7 @@
             to { opacity: 1; }
         }
 
-        /* Estrellas fugaces */
+                               
         .estrella {
             position: absolute;
             width: 2px;
@@ -105,4 +105,38 @@
         .estrella-2 { top: 30%; left: 20%; animation-delay: 2s; }
 
         @keyframes estrella {
-            from { transform: translateX
+            from { transform: translateX(0) rotate(45deg); opacity: 1; }
+            to { transform: translateX(100px) rotate(45deg); opacity: 0; }
+        }
+
+                           
+        .reno {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-image: url('https://example.com/reno.png'); /* Reemplaza con una imagen de reno */
+            background-size: cover;
+            animation: volar 10s infinite;
+        }
+
+        .reno-1 { top: 20%; left: 0; animation-delay: 0s; }
+        .reno-2 { top: 40%; left: 0; animation-delay: 3s; }
+
+        @keyframes volar {
+            from { transform: translateX(0); }
+            to { transform: translateX(100vw); }
+        }
+    </style>
+</head>
+<body>
+    <div class="luces"></div>
+    <div class="estrella estrella-1"></div>
+    <div class="estrella estrella-2"></div>
+    <div class="reno reno-1"></div>
+    <div class="reno reno-2"></div>
+    <div class="navidad-container">
+        <h1 class="mensaje-navidad">Feliz Navidad</h1>
+        <p class="descripcion">Que sean felices con sus familias</p>
+    </div>
+</body>
+</html>
