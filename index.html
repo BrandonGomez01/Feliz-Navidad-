@@ -19,23 +19,21 @@
 
         .navidad-container {
             text-align: center;
-            color: white;
+            color: #ffcc00; /* Color amarillo para el texto */
             animation: fadeIn 2s ease-in-out;
             z-index: 1; /* Asegura que el texto esté adelante */
             position: relative;
         }
 
         .mensaje-navidad {
-            font-size: 3em;
+            font-size: 2em; /* Tamaño de letra reducido */
             text-shadow: 0 0 10px #ffcc00, 0 0 20px #ff9900;
             animation: glow 1.5s infinite alternate;
-            color: #ffcc00; /* Color amarillo para el texto */
         }
 
         .descripcion {
-            font-size: 11.5em;
+            font-size: 11.2em; /* Tamaño de letra reducido */
             margin-top: 20px;
-            color: #ffcc00; /* Color amarillo para el texto */
         }
 
         @keyframes fadeIn {
@@ -51,7 +49,7 @@
         /* Copos de nieve */
         .copo {
             position: absolute;
-            font-size: 11.5em;
+            font-size: 1.5em;
             animation: nieve 5s linear infinite;
             z-index: 0; /* Asegura que los copos estén atrás */
         }
